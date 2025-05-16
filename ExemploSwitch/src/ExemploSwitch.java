@@ -5,32 +5,16 @@ public class ExemploSwitch {
     public static void main(String[] args) {
         int diaSemana = 3;
         String dia;
-        switch (diaSemana) {
-            case 1:
-                dia = "Domingo";
-                break;
-            case 2:
-                dia = "Segunda-feira";
-                break;
-            case 3:
-                dia = "Terça-feira"; // Saída: Hoje é Terça-feira.
-                dia = "Terça-feira";
-                break;
-            case 4:
-                dia = "Quarta-feira";
-                break;
-            case 5:
-                dia = "Quinta-feira";
-                break;
-            case 6:
-                dia = "Sexta-feira";
-                break;
-            case 7:
-                dia = "Sábado";
-                break;
-            default:
-                dia = "Dia inválido";
-        }
+        dia = switch (diaSemana) {
+            case 1 -> "Domingo";
+            case 2 -> "Segunda-feira";
+            case 3 -> "Terça-feira";
+            case 4 -> "Quarta-feira";
+            case 5 -> "Quinta-feira";
+            case 6 -> "Sexta-feira";
+            case 7 -> "Sábado";
+            default -> "Dia inválido";
+        }; // Saída: Hoje é Terça-feira
         System.out.println("Hoje é " + dia + ".");
     }
 }
